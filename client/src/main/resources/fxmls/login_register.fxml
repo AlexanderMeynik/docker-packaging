@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import ru.edu.spbstu.clientComponents.PasswordTextField?>
+
+<AnchorPane prefHeight="248.0" prefWidth="537.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.edu.spbstu.client.controllers.LoginFormController">
+    <children>
+        <TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="520.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab fx:id="logInTab" text="%logInTab">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane prefHeight="249.0" prefWidth="513.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" percentWidth="15.0" prefWidth="68.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="466.0" minWidth="10.0" prefWidth="253.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="466.0" minWidth="10.0" percentWidth="25.0" prefWidth="149.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="466.0" minWidth="10.0" percentWidth="25.0" prefWidth="149.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="69.0" minHeight="10.0" percentHeight="20.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="119.0" minHeight="10.0" percentHeight="20.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="180.0" minHeight="10.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="%passwordLabel" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                            <padding>
+                                                <Insets right="20.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="%loginLabel" GridPane.halignment="RIGHT">
+                                            <padding>
+                                                <Insets right="20.0" />
+                                            </padding>
+                                        </Label>
+                                        <TextField fx:id="loginTextBox" onKeyTyped="#updateLogin" prefHeight="25.0" prefWidth="221.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <PasswordTextField fx:id="passwordTextBox" onKeyTyped="#updateLogin" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                                        <CheckBox fx:id="rememberMeCheckBox" mnemonicParsing="false" text="%rememberMe" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                            <padding>
+                                                <Insets right="20.0" />
+                                            </padding>
+                                            <GridPane.margin>
+                                                <Insets top="10.0" />
+                                            </GridPane.margin>
+                                        </CheckBox>
+                                        <Button fx:id="forgetPasswordButton" mnemonicParsing="false" onAction="#forgotPasswordButtonPress" prefHeight="25.0" prefWidth="139.0" text="%forgotPasswordButton" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                            <GridPane.margin>
+                                                <Insets left="3.0" right="3.0" top="10.0" />
+                                            </GridPane.margin></Button>
+                                        <Button fx:id="logInButton" mnemonicParsing="false" onAction="#logInButtonPress" prefHeight="25.0" prefWidth="139.0" text="%logInButton" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                                            <GridPane.margin>
+                                                <Insets left="5.0" right="5.0" top="10.0" />
+                                            </GridPane.margin></Button>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="regTab" text="%registerTab">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane prefWidth="520.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" percentWidth="20.0" prefWidth="91.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="466.0" minWidth="10.0" prefWidth="452.0" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="69.0" minHeight="10.0" percentHeight="25.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="119.0" minHeight="10.0" percentHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="152.0" minHeight="10.0" percentHeight="25.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="152.0" minHeight="10.0" percentHeight="25.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="180.0" minHeight="10.0" percentHeight="25.0" prefHeight="66.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <Label text="email" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                                            <padding>
+                                                <Insets right="20.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="%loginLabel" GridPane.halignment="RIGHT">
+                                            <padding>
+                                                <Insets right="20.0" />
+                                            </padding>
+                                        </Label>
+                                        <Label text="%passwordLabel" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                                            <padding>
+                                                <Insets right="20.0" />
+                                            </padding>
+                                        </Label>
+                                        <TextField fx:id="regLoginTextBox" onKeyTyped="#updateRegisterButton" prefWidth="433.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                        <TextField fx:id="emailTextBox" onKeyTyped="#updateRegisterButton" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                        <PasswordTextField fx:id="regPasswordTextBox" onKeyTyped="#updateRegisterButton" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                        <Button fx:id="registerButton" mnemonicParsing="false" onAction="#registerButtonPress" prefHeight="25.0" prefWidth="139.0" text="%registerButton" GridPane.columnSpan="2" GridPane.halignment="RIGHT" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

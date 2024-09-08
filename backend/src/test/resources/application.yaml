@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: 12345678
+    driver-class-name: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    generate-ddl: true
+  mail:
+    host: localhost
+    port: 3025
+    username: hellotest
+    password: hellotest
+
+    properties:
+      mail:
+        smtp:
+          ssl:
+            trust: "*"
+          auth: true
+          starttls:
+            enable: true
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
